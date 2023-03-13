@@ -3,7 +3,18 @@
 #include<iostream>
 #include<vector>
 template<class T>
-std::insertionsort(std::vector<T>& input, int size){
+std::insertionsort(std::vector<T>& input, int si){
+  int j;
+  T key;
+  for(int i=1;i<=si;i++){
+    key=input[i];
+    j=i-1;
+    while(j>=0 && input[j]>key){
+      input[j+1]=input[j];
+      j=j-1;
+    }
+    input[j+1]=key;
+  }
 }
 
 //main method..
