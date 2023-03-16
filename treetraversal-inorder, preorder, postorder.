@@ -1,0 +1,27 @@
+	//////////	Tree traversal 		/////////
+
+1. In-order Traversal
+2. Pre-order Traversal
+3. Post-order Traversal
+
+
+1. INORDER TRAVERSAL: - The left subtree is visited first, then the root and later the right sub-tree. we should remember that every node may represent a subtree itself.
+#ALGORITHM:
+UNTIL ALL NODE ARE TRAVERSED:-
+s1:- Recursively traverse left subtree.
+s2:- Visit root node.
+s3:- Recursively traverse right subtree.
+
+2. PRE-ORDER TRAVERSAL: - The root node is visited first, then the left subtree and finally the right subtree.
+#ALGORITHM:
+UNTIL ALL NODE ARE TRAVERSED:-
+s1:- visit root node.
+s2:- Recursively traverse left subtree.
+s3:- Recursively traverse right subtree.
+
+3. POST-ORDER TRAVERSAL: - The root node is visited last, first we traverse the left subtree, then the right subtree and finally the root node.
+#ALGORITHM:
+UNTIL ALL NODE ARE TRAVERSED:- 
+s1:- Recursively traverse left subtree.
+s2:- Recursively traverse right subtree.
+s3:- visit root node.
