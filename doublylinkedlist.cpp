@@ -15,11 +15,11 @@ public:
     this->prev=NULL;
   }
 };
-class linkedlist{
+class doublylinklist{
 Node* head;
 Node* tail;
   public:
-  linkedlist(){
+  doublylinklist(){
   head=tail=NULL;
   }
   void insertfront(int);
@@ -32,3 +32,19 @@ Node* tail;
   int search(int);
   void totalNodes();
 };
+
+
+// insert at front in the linked list::
+void doublylinklist::insertfront(int value){
+  Node* newnode=new Node(value);
+  if(head==NULL){
+    head=tail=newnode;
+  }
+  else{
+    
+  }
+}
+
+
+
+
