@@ -18,6 +18,7 @@ public:
 class doublylinklist{
 Node* head;
 Node* tail;
+  int size=0;
   public:
   doublylinklist(){
   head=tail=NULL;
@@ -34,17 +35,23 @@ Node* tail;
 };
 
 
-// insert at front in the linked list::
+// insert at front in the doubly linked list::
 void doublylinklist::insertfront(int value){
   Node* newnode=new Node(value);
   if(head==NULL){
     head=tail=newnode;
   }
   else{
-    
+    head->prev=newnode;
+    newnode->next=head;
+    head=newnode;
+    size++;
   }
 }
 
+// insert at the end of dounly linked list..
+void doublylinklist::insertback(int value){
+  Node* newnode=new Node(value);
 
-
+}
 
