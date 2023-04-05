@@ -1,110 +1,68 @@
+/* implementation of singly link list using class in c++ */
 #include<iostream>
 class Node{
-  public:
-   int data;
-   Node* next;
+public:
+int data;
+Node* next;
+Node(){
+  data=0;
+  next=NULL;
+}
   Node(int data){
-    this->data=data;
-  }
-  
-  Node* takeInput(){
-    int data;
-    Node* head=NULL;
-    Node* tail=NULL;
-    cin>>data;
-    while(data!=-1){
-      Node* newNode=new Node(data);
-      if(head==NULL){
-        head=newNode;
-        tail=newNode;
-      }
-    }
-  }
-};
-
-////////////////////////  MODIFIED CODE:::
-#include<iostream>
-class Node{
-  public:
-  int data;
-  Node* next;
-  Node(){
-    data=0;
-    next=NULL;
-  }
-  Node(int data){
-    this->data=data;
-    this->next=NULL;
+  this->data=data;
+  this->next=NULL;
   }
 };
 class linklist{
-  Node* head;
+Node* head;
 public:
-  linklist(){
-    head=NULL;
-  }
-  void insertdata(int);
-  void displaylist();
-  int lengthoflist();
+linklist(){
+  head=NULL;
+} 
+  void insertfront(int);
+  void insertback(int);
+  void insertafter(int,int);
+  void deletefront();
+  void deleteback();
+  void display();
 };
-
-void linklist::insertdata(int data){
+void linklist::insertfront(int data){
   Node* newnode=new Node(data);
   if(head==NULL){
-    head=newnode;
+  head=newnode;
+    newnode->next=NULL;
     return;
   }
-  Node* temp=head;
+  newnode->next=head;
+  head=newnode;
+}
+void linklist::insertback(int data){
+Node* newnode=new Node(data);
+if(head==NULL){
+head=newnode;
+newnode->next=NULL;}
+Node* temp=head;
   while(temp->next!=NULL){
     temp=temp->next;
   }
   temp->next=newnode;
+  newnode->next=NULL;
 }
 
-
-void linklist::displaylist(){
+void linklist::display(){
   Node* temp=head;
   while(temp!=NULL){
-    std::cout<<temp->data<<" ";
-    temp=temp->next;
+  std::cout<<temp->data<<" ";
+  temp=temp->next;
   }
+  std::cout<<"\n";
 }
-
-
-int linklist::lengthoflist(){
-  int len=0;
-  Node* temp=head;
-  while(temp!=NULL){
-    len++;
-    temp=temp->next;
-  }
-  return len;
-}
-
-int main(){
+int main(){ 
   linklist list;
-  list.insertdata(14);
-  list.insertdata(14);
-  list.insertdata(14);
-  list.insertdata(14);
-  list.insertdata(14);
-  list.insertdata(14);list.insertdata(14);
-  list.insertdata(14);
-  std::cout<<"displaying list:\n";
-  list.displaylist();
-  std::cout<<"Length of list is: "<<list.lengthoflist()<<" "; 
-
+  list.insertfront(24);list.insertfront(24);list.insertfront(24);list.insertfront(24);list.insertfront(24);list.insertfront(24);
+  list.insertback(77);list.insertback(98);list.insertback(91);list.display();
   return 0;
 }
-
-
-
-
-
-
-
-
-
 
 
 
