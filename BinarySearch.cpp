@@ -17,3 +17,5 @@ int binarysearch(vector<int>&array, int val){
     }
   return -1;
 }
+  
+  // we can implement binarysearch using recursion as well.
