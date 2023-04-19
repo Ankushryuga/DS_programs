@@ -65,6 +65,30 @@ return 0;
 
 /*Stack implementation using fixed size array. */
 
+#include<iostream>
+#define maxsize 5
+
+class stack{
+public:
+int top;
+int input[maxsize];
+ stack(){
+ top=0;
+ }
+  void push(int);
+  void pop();
+  void display();
+};
+
+void stack::push(int data){
+  if(top==0){
+    input[top]=data;
+  }
+  top++;
+  input[top]=data;
+}
+
+
 
 
 
