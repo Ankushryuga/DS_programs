@@ -1,16 +1,15 @@
-/* Implementation of queue using array and linked list */
-#include<iostream>
-#define maxsize 5
+/* Implementation of queue using array */
 
-class queue{
+#include<iostream>
+class Queue{
 public:
-int data;
-int front;
-int rear;
-queue(){
-data=front=rear=0;
-}
-  void insert();
-  void delete();
-  void display();
+int front, rear, size;
+unsigned capacity;
+  Queue(){
+    front=rear=size=0;
+    capacity=0;
+  }
+  Queue* createQueue(unsigned);
+  void enqueue(Queue*, int);
+  int dequeue(Queue*);
 };
