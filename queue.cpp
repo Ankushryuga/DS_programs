@@ -1,15 +1,15 @@
 /* Implementation of queue using array */
-
 #include<iostream>
-class Queue{
-public:
+#define maxsize 5
+
+
+class queue{
 int front, rear, size;
-unsigned capacity;
-  Queue(){
-    front=rear=size=0;
-    capacity=0;
-  }
-  Queue* createQueue(unsigned);
-  void enqueue(Queue*, int);
-  int dequeue(Queue*);
+public:
+queue(){
+front=rear=size=0;
+}
+void enqueue(int);
+int dequeue();
+void display();
 };
