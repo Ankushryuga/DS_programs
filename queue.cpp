@@ -23,3 +23,26 @@ void queue::enqueue(int data){
   rear++;
   array[rear]=data;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Note: - in normal queue there is lot of memory leakage thats why different types of queue implemented to overcome this issue.for example circular queue, priority queue, Dequeue.
+
+*/
+
