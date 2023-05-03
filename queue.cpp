@@ -61,5 +61,14 @@ Node(){
   this->next=NULL;
   }
 };
+
+class Queue{
+Node* front;
+Node* rear;
+public:
+Queue(){
+front=NULL;
+rear=NULL;
+}};
   
 
