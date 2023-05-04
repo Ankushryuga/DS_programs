@@ -28,3 +28,26 @@ Node* front;
   int dequeue();
   void display();
 };
+
+
+void queue::enqueue(int data){
+//implementation pending.
+}
+
+
+int queue::dequeue(){
+//implementation pending.
+}
+
+void queue::display(){
+//implementation pending.
+}
+
+
+
+int main(){
+queue q;
+q.enqueue(42);q.enqueue(42);q.enqueue(42);q.enqueue(42);
+std::cout<<q.dequeue()<<" ";
+return 0;
+}
