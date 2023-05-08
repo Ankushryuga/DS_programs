@@ -13,3 +13,16 @@ Node(int data){
 this->data=data;
 this->next=NULL;
 };
+
+class queue{
+Node* front;
+Node* rear;
+public:
+queue(){
+front=NULL;
+rear=NULL;
+}
+void enqueue(int);
+int dequeue();
+void display();
+};
