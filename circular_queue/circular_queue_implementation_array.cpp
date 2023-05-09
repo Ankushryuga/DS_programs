@@ -47,7 +47,7 @@ int circular_queue::dequeue(){
 void circular_queue::display(){
 int count=((rear+maxsize-front)%maxsize)+1;
   for(int i=0;i<count;i++){
-  std::cout<<array[front+i]%maxsize<<" ";
+  std::cout<<array[(front+i)%maxsize]<<" ";
   }
   std::cout<<"\n";
 }
