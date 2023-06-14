@@ -32,9 +32,8 @@
     }
 
 
-
 int main(){
- std::string temp="heheheh";
+ std::string temp="ababb";
  std::cout<<"Longest Palindromic solution is:"<<longestPalindrome(temp);
 return 0;
 }
