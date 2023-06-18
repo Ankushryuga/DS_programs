@@ -5,7 +5,7 @@
 void heapify(std::vector<int>&array){}
 
 void heapsort(){}
-
+// main method of heapsort
 int main(){
 
   return 0;
