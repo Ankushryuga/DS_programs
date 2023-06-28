@@ -7,6 +7,6 @@ void heapify(std::vector<int>&array){}
 void heapsort(){}
 // main method of heapsort
 int main(){
-
+std::vector<int>nums{1,13,242,12,142,48,18};
   return 0;
 }
