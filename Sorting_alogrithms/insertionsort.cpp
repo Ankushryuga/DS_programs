@@ -16,7 +16,7 @@ void insertion_sort(std::vector<int>& array){
 }
 
 int main(){
-  std::vector<int>array{9,1,42,142,53};
+  std::vector<int>array{9,1,42,142,53,77};
   insertion_sort(array);
   for(int i=0;i<array.size();i++){
   std::cout<<array[i]<<" ";
